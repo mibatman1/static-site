@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    
 </head>
 <body>
 
@@ -231,25 +232,25 @@
                             </div>
     
                             <div class="col-12 col-md-4 right_col">
-                                 <form id="submitform">
+                                 <form id="testform">
                                 <div class="form an_form" autocomplete="off">
     
                                     <h4 class="title">Have a Question! <span>Enquire Now</span></h4>
                     
-                                    <input hidden="" type="text" autocomplete="false">
+                                    <!-- <input hidden="" type="text" autocomplete="false"> -->
                                     <div class="form-group mx-0">
                                       <label for="name">Name*</label>
-                                      <input type="text" class="form-control" id="name" placeholder="Enter Your Name*" name="name" onkeypress="return ((event.charCode >= 65 &amp;&amp; event.charCode <= 90) || (event.charCode >= 97 &amp;&amp; event.charCode <= 122) || event.charCode == 32)" required="">
+                                      <input type="text" class="form-control" id="name" placeholder="Enter Your Name*" name="name" required="">
                                       <div class="outline"></div>
                                     </div>
                                     <div class="form-group mx-0">
                                       <label for="email">Email*</label>
-                                      <input type="email" class="form-control" id="email" placeholder="Enter Your Email*" name="email" pattern="[a-zA-Z]{3,}@[a-zA-Z]{3,}[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,}" required="" size="32" minlength="3" maxlength="64">
+                                      <input type="email" class="form-control" id="email" placeholder="Enter Your Email*" name="email" required="" size="32" minlength="3" maxlength="64">
                                       <div class="outline"></div>
                                     </div>
                                     <div class="form-group mx-0">
                                         <label for="number">Mobile Number*</label>
-                                        <input type="text" class="form-control" id="phone" placeholder="Mobile No*" name="phone" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 &amp;&amp; event.charCode <= 57" required=""> 
+                                        <input type="text" class="form-control" id="phone" placeholder="Mobile No*" name="phone" required=""> 
                                         <div class="outline"></div>
                                     </div>
                                     <div class="form-group mx-0">
@@ -257,8 +258,8 @@
                                         <input type="hidden" class="form-control" id="city" value="Noida" placeholder="Enter Your City*" name="city" required=""> 
                                         <div class="outline"></div>
                                     </div>
-                                    <input type="hidden" name="" id="ip" value="49.47.70.181">
-                                    <input type="button" value="Book A Site Visit" name="submit" class="btn dark_btn submit_btn" id="SubmitQuery" onclick="contactusbutton('submitform')">
+                                    <!-- <input type="hidden" name="" id="ip" value="49.47.70.181"> -->
+                                    <input type="submit" value="Book A Site Visit" name="submit" class="btn dark_btn submit_btn" id="SubmitQuery"/>
                                 </div>
                                 </form>
                             </div>
@@ -923,5 +924,11 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="./index.js"></script>
+    <script type="text/javascript">
+    emailjs.init('YOUR PUBLIC KEY')
+    </script>
 </body>
 </html>

@@ -16,3 +16,16 @@ document.getElementById('testform').addEventListener('submit', function(event) {
       alert(JSON.stringify(err));
     });
 });
+
+document.addEventListener("scroll", function() {
+  const priceSection = document.getElementById("price-list");
+  const modal = new bootstrap.Modal(document.getElementById("modal1"));
+
+  // Check if user has scrolled past the price section
+  if (window.scrollY > priceSection.offsetTop + priceSection.offsetHeight) {
+    modal.show();
+    // Remove the scroll event listener after showing the modal
+    document.removeEventListener("scroll", arguments.callee);
+  }
+});
+

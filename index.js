@@ -33,6 +33,7 @@ document.getElementById('testform1').addEventListener('submit', function(event) 
      alert(JSON.stringify(err));
    });
 });
+
 document.getElementById('testform2').addEventListener('submit', function(event) {
   event.preventDefault();
   btn.value = 'Sending...';
@@ -49,6 +50,7 @@ document.getElementById('testform2').addEventListener('submit', function(event) 
      alert(JSON.stringify(err));
    });
 });
+
 document.addEventListener("scroll", function() {
   const priceSection = document.getElementById("price-list");
   const modal = new bootstrap.Modal(document.getElementById("modal1"));
@@ -60,4 +62,13 @@ document.addEventListener("scroll", function() {
     document.removeEventListener("scroll", arguments.callee);
   }
 });
+
+function toggleNavbar() {
+  document.getElementById("navbarNavAltMarkup").classList.toggle("show");
+}
+
+function closeHamburgerMenu()
+{
+  document.getElementById("navbarNavAltMarkup").classList.remove("show");
+}
 

@@ -126,10 +126,10 @@ h1,h2,h3,h4,h5,h6{color:#342f4f}
 .px_30{padding-left:30px!important; padding-right:30px!important;}
 
 .ov_headings{margin-bottom: 40px; position:relative;}
-.ov_headings:before{position:absolute; content:''; background:#fff;}
+.ov_headings:before{position:absolute; content:''; background:black;}
 .ov_headings.left{padding-left:20px;}
 .ov_headings.left:before{top:0; left:0; height:100%; width:4px;}
-.ov_headings.left.green:before{background:#fff;}
+.ov_headings.left.green:before{background:black;}
 .ov_headings.center{text-align: center; display: table; margin: auto; max-width: fit-content; padding-bottom:20px;}
 .ov_headings.center:before{top:100%; height:4px; left:50%; transform:translateX(-50%); width:30%;}
 
@@ -346,7 +346,7 @@ h1,h2,h3,h4,h5,h6{color:#342f4f}
 .banner_section .carousel-indicators li{height: 25px; width: 25px; text-indent: 0; border:none; opacity:1; background: transparent; position:relative;}
 .banner_section .carousel-indicators li .round{height: 25px; width: 25px; display: flex; align-items: center; justify-content: center; background: transparent; border: 2px solid #000; color: #000; opacity: 0.9; border-radius: 50%; font-size:10px; transition:all 0.3s ease-in-out;}
 .banner_section .carousel-indicators li.active .round{opacity:1; background:var(--yellow); color:#fff; font-weight: 700; border-color:var(--yellow);}
-.banner_section .submit_btn{height: 50px; width: 100%; display: flex; align-items: center; justify-content: center; background:var(--yellow); border-radius: 0; margin-top: 25px; color: #fff; font-weight: 700; text-transform: uppercase; font-size: 15px;}
+.banner_section .submit_btn{height: 50px; width: 100%; display: flex; align-items: center; justify-content: center; background:var(--yellow); border-radius: 0; margin-top: 25px; color: black; font-weight: 700; text-transform: uppercase; font-size: 15px;}
 .banner_section .carousel-indicators li:not(:last-child){margin-right:80px;}
 .banner_section .carousel-indicators li:not(:last-child):before{position:absolute; content:''; width:60px; height:2px; background:#fff; left:36px; opacity:0.2; top:50%; transform:translateY(-50%);}
 .banner_section .submit_btn img{max-width:24px; max-width: 16px; margin-left: 6px;}
@@ -1046,6 +1046,8 @@ footer a{
 .modal .modal-body{
     padding:45px;
     position:relative;
+    background-color: #D3B972;
+    color: #000;
 }
 
 .modal .modal-body .close{
@@ -2511,4 +2513,42 @@ footer a{
       width: 100%; /* 1 image per row */
     }
   }
-</styl
+
+  .offer
+  {
+    background-color: #D3B972;
+    padding: 10px;
+    font-size: larger;
+    font-weight: bolder;
+    display: inline;
+    color: #000;
+  }
+
+  /* Hide default radio button */
+.radio-group input[type="radio"] {
+    display: none;
+}
+
+/* Style the label as the radio button */
+.radio-group label {
+    display: inline-block;
+    background-color: #e0e0e0;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 5px;
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Change color on hover */
+.radio-group label:hover {
+    background-color: #d0d0d0;
+}
+
+/* When radio is checked, change label background and color */
+.radio-group input[type="radio"]:checked + label {
+    background-color: #007bff;
+    color: #fff;
+}

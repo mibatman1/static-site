@@ -33,7 +33,22 @@ document.getElementById('testform1').addEventListener('submit', function(event) 
      alert(JSON.stringify(err));
    });
 });
+document.getElementById('testform2').addEventListener('submit', function(event) {
+  event.preventDefault();
+  btn.value = 'Sending...';
 
+  const serviceID = 'service_gtu2llx';
+  const templateID = 'template_kblkj48';
+
+  emailjs.sendForm(serviceID, templateID, this)
+   .then(() => {
+     btn.value = 'BOOK A SITE VISIT';
+     alert('Sent!');
+   }, (err) => {
+     btn.value = 'BOOK A SITE VISIT';
+     alert(JSON.stringify(err));
+   });
+});
 document.addEventListener("scroll", function() {
   const priceSection = document.getElementById("price-list");
   const modal = new bootstrap.Modal(document.getElementById("modal1"));

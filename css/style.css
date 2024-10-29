@@ -664,7 +664,7 @@ h1,h2,h3,h4,h5,h6{color:#342f4f}
 /* amenities_section */
 
 .amenity_section{overflow: hidden; position:relative;}
-.amenity_section:before{position:absolute; content:''; height:190px; width:90%; background:var(--yellow);}
+.amenity_section:before{position:absolute; content:''; height:130px; width:90%; background:var(--yellow);}
 .amenity_section .left_col{position:unset; max-width:40%; flex:0 0 40%;}
 .amenity_section .left_col img{position:absolute; content:''; height:100%; left:0; width:40%; top:0; object-fit: cover;}
 .amenity_section .right_col{position:unset;max-width:60%; flex:0 0 60%;}

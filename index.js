@@ -72,3 +72,6 @@ function closeHamburgerMenu()
   document.getElementById("navbarNavAltMarkup").classList.remove("show");
 }
 
+document.querySelectorAll('#navbarNavAltMarkup .nav-link').forEach(link => {
+  link.addEventListener('click', closeHamburgerMenu);
+});

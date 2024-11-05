@@ -189,11 +189,11 @@ h1,h2,h3,h4,h5,h6{color:#342f4f}
 .banner_section .head_line{max-width: fit-content; position: relative;}
 .banner_section .bannerHeading{font-size: 64px; margin: 10px 0 5px; font-weight: 600; color: #fff;}
 .banner_section .typo{margin: 0; padding: 14px 30px; font-size: 18px; text-transform: uppercase; letter-spacing: 1.5px; display:block; font-weight: 800; margin-left: 30px; margin-top: 0px; position:relative; color:#fff; max-width: fit-content; z-index: 1;}
-.banner_section .typo:after{ position:absolute; content:''; background: #342f4f; left:0; top:0; width:100%; height:100%; z-index: -1; clip-path: polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%);}
+.banner_section .typo:after{ position:absolute; content:''; background: #d3b972; left:0; top:0; width:100%; height:100%; z-index: -1; clip-path: polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%);}
 .banner_section .readyToMove{color:#fff; max-width: fit-content; margin: 30px 0 0; padding: 0; position: relative;font-weight: 800; letter-spacing: 1px; font-size: 17px;}
 
 .banner_section .typo:before{position:absolute; content:''; height:100%; width:10px; background:
-#342f4f; right:calc(100% + 10px); top:0; transform: skewX(-17deg);}
+    #d3b972; right:calc(100% + 10px); top:0; transform: skewX(-17deg);}
 
 
 .banner_section .price{max-width: max-content; margin-top: 50px; margin-bottom: 50px;}
@@ -2484,21 +2484,53 @@ footer a{
     }
   }
 
+  /* Container styling */
+.image-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden; /* Hides overflow to make a smooth scroll effect */
+    white-space: nowrap;
+    padding: 10px 0;
+  }
+  
+  /* Image styling */
+  .image-container img {
+    width: 100px; /* Set a fixed width for each logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between logos */
+  }
+  
+  /* Animation styling */
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
   .image-container {
+    animation: scroll 30s linear infinite; /* Speed and looping */
+  }
+  
+
+  /* .image-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px; /* Space between images */
+    gap: 15px; 
     justify-content: center;
     padding: 10px;
-  }
+  } */
 
   /* Image item styling */
-  .image-container img {
-    width: calc(25% - 10px); /* 4 images per row with a gap */
-    height: 200px; /* Set fixed height for uniform size */
-    object-fit: contain; /* Ensures image covers the area without distortion */
-    border-radius: 8px; /* Rounded corners */
-  }
+  /* .image-container img {
+    width: calc(25% - 10px); 
+    height: 200px; 
+    object-fit: contain; 
+    border-radius: 8px; 
+  } */
 
   /* Responsive styling for tablets and smaller screens */
   @media (max-width: 768px) {

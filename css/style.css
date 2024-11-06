@@ -2533,18 +2533,7 @@ footer a{
   } */
 
   /* Responsive styling for tablets and smaller screens */
-  @media (max-width: 768px) {
-    .image-container img {
-      width: calc(50% - 10px); /* 2 images per row */
-    }
-  }
-
-  /* Responsive styling for mobile screens */
-  @media (max-width: 480px) {
-    .image-container img {
-      width: 100%; /* 1 image per row */
-    }
-  }
+  
 
   .offer
   {
